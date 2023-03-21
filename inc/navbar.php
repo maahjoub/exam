@@ -16,14 +16,16 @@ include "function/function.php";
                         <a href="logout.php">تسجيل الخروج</a>
                     <?php } ?>
                 </td>
-                <td style="border: 1px solid #555" class="<?= isset($_SESSION['type']) && $_SESSION['type'] != 1 ?  'admin' :  '' ?>">
-                    <a href=" sinup.php">تسجيل جديد</a>
-                </td>
-                <td style="border: 1px solid #555; " class="<?= isset($_SESSION['type']) && $_SESSION['type'] != 1 ?  'admin' :  '' ?>">
-                    <a href=" subject.php"> اضافة مادة</a>
-                </td>
-                <td style="border: 1px solid #555;  " class="<?= isset($_SESSION['type']) && $_SESSION['type'] != 1 ?  'admin' :  '' ?>">
-                    <a href=" section.php"> اضافة قسم</a>
+                <td>
+                    <div class="dropdown <?= isset($_SESSION['type']) && $_SESSION['type'] != 1 || $_SESSION['type'] = null ?  'admin' :  '' ?>">
+                        <button class="dropbtn">عمليات المسجل</button>
+                        <div class="dropdown-content">
+                            <a href=" sinup.php">تسجيل جديد</a>
+                            <a href=" subject.php"> اضافة مادة</a>
+                            <a href=" section.php"> اضافة قسم</a>
+                            <a href=" teacher.php"> اضافة استاذ</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>

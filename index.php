@@ -6,10 +6,7 @@ include_once "function/function.php";
 if (isset($_SESSION['userID'])) {
     $stdNum = first($coon, "stdnum", $_SESSION['userID'], "std_id");
 }
-
-
 ?>
-
 <div class="container">
     <div class="top-header">
         <div class="info"> <span><?= isset($_SESSION['fullname']) ? '  مرحبا  : ' . $_SESSION['fullname'] : '' ?></span></div>
@@ -17,7 +14,6 @@ if (isset($_SESSION['userID'])) {
         <div class="info"></div>
     </div>
 </div>
-
 <?php
 include_once "inc/footer.php";
 ?>
