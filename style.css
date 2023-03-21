@@ -1,0 +1,165 @@
+body {
+  direction: rtl;
+  background-color: #7e74fb;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+.container {
+  margin: 0 100px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.header .un-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+.header .item {
+  font-size: 20px;
+  font-weight: 500;
+}
+.header .item img {
+  width: 50px;
+  height: 50px;
+}
+.nav table {
+  margin: auto;
+}
+.nav table td {
+  border: 1px solid #555;
+  font-size: 30px;
+  padding: 10px;
+  margin: 0px;
+  width: 200px;
+  text-align: center;
+}
+
+.nav table a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  color: #fff;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #f1f3f4;
+  color: #000;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  direction: ltr;
+  padding: 15px;
+}
+.footer-link li a {
+  /* color: #fff; */
+  text-decoration: none;
+}
+
+/* start abiut */
+.lead {
+  width: 50%;
+  margin: 50px auto;
+  direction: rtl;
+  text-align: justify;
+}
+.admin {
+  display: none;
+}
+/* end abiut */
+/* start log in  */
+label {
+  color: #000;
+}
+.form {
+  background-color: #f3f3f3;
+  width: 400px;
+  height: auto;
+  margin: 20px auto;
+  padding: 5px 40px;
+  margin-bottom: 50px;
+}
+.input-grpup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-grpup input {
+  width: 70% !important;
+  padding: 15px;
+  margin: 10px 0;
+  outline: none;
+  border: none;
+}
+.input-grpup select {
+  width: 85% !important;
+  padding: 15px;
+  margin: 10px 0;
+  outline: none;
+  border: none;
+}
+.input-grpup input:focus {
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+.submit button {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: rgb(71, 15, 226);
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+/* end log in  */
+/* strt exam */
+
+.exam {
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+}
+.exam span {
+  display: block;
+}
+.middle-ex {
+  width: 75vw;
+  margin: auto;
+  direction: rtl;
+}
+/* end exam */
+.bsm {
+  width: 430px;
+  margin: auto;
+  text-align: center;
+}
+.header table {
+  margin: auto;
+  width: 700px;
+  text-align: center;
+}
+.header table td {
+  border: 1px solid #000;
+}
+.percen {
+  display: block;
+  font-size: 30px;
+  margin: 20px auto;
+  width: 200px;
+}
+.alert-danger {
+  background-color: firebrick;
+  width: 380px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
