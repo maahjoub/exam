@@ -3,7 +3,10 @@ include_once "inc/database.php";
 include_once "inc/header.php";
 include_once "inc/navbar.php";
 include_once "function/function.php";
-$stdNum = first($coon, "stdnum", $_SESSION['userID'], "std_id");
+if (isset($_SESSION['userID'])) {
+    $stdNum = first($coon, "stdnum", $_SESSION['userID'], "std_id");
+}
+
 
 ?>
 
