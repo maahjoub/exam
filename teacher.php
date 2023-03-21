@@ -4,31 +4,34 @@ include_once "inc/database.php";
 include_once "inc/header.php";
 include_once "function/function.php";
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $name = $_POST['fullName'];
-    $genders = $_POST['gender'];
-    $countery = $_POST['countery'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $hashPass = sha1($password);
-    $type =  $_POST['type'];
+    $name = $_POST['name'];
+    $level = $_POST['level'];
+    $degree = $_POST['degree'];
+    $startDate = $_POST['startDate'];
+    $specialize = $_POST['specialize'];
+    $section =  $_POST['section'];
+    $work =  $_POST['work'];
     $errors = [];
     if (empty($name)) {
         $errors['name'] = "حقل الاسم مطلوب";
     }
-    if (empty($genders)) {
-        $errors['gender'] = "حقل النوع مطلوب";
+    if (empty($level)) {
+        $errors['level'] = "حقل الدرجة العلمية مطلوب";
     }
-    if (empty($countery)) {
-        $errors['countery'] = "حقل البلد مطلوب";
+    if (empty($degree)) {
+        $errors['degree'] = "حقل الشهادة مطلوب";
     }
-    if (empty($password)) {
-        $errors['password'] = "حقل كلمة المرور مطلوب";
+    if (empty($startDate)) {
+        $errors['startDate'] = "حقل تاريخ البدء مطلوب";
     }
-    if (empty($email)) {
-        $errors['email'] = "حقل الايميل مطلوب";
+    if (empty($specialize)) {
+        $errors['specialize'] = "حقل التخصص مطلوب";
     }
-    if (empty($type)) {
-        $errors['type'] = "هذا الحقل مطلوب";
+    if (empty($section)) {
+        $errors['section'] = "هذا الحقل مطلوب";
+    }
+    if (empty($work)) {
+        $errors['work'] = "هذا الحقل مطلوب";
     }
     if (empty($errors)) {
         $stmt = $coon->prepare("INSERT INTO student (name, gender_id, country_id, email, password, type) 
@@ -66,7 +69,7 @@ $countreis = selectAll($coon, "country");
             </div>
             <div class="input-grpup">
                 <label for=""> تاريخ بدء العمل </label>
-                <input type="text" id="datepicker" name="start-date" placeholder="تاريخ بدء العمل">
+                <input type="text" id="datepicker" name="startDate" placeholder="تاريخ بدء العمل">
             </div>
 
             <div class="input-grpup">
